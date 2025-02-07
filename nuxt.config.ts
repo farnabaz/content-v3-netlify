@@ -13,5 +13,11 @@ export default defineNuxtConfig({
       type: 'sqlite',
       filename: '/tmp/database.sqlite',
     }
+  },
+  routeRules: {
+    '/deps.json': {
+      prerender: true
+    }
+    
   }
 })
