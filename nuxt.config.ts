@@ -1,7 +1,15 @@
+import path from "node:path"
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
+    (_, nuxt) => {
+      nuxt.hook('nitro:config', (nitroConfig) => {
+        nitroConfig.alias ||= {}
+        nitroConfig.alias['#content/adapter'] = path.resolve('./connector/deno.mjs')
+      })
+    }
   ],
   devtools: { enabled: true },
   future: {

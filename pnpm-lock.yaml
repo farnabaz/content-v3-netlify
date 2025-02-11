@@ -13,6 +13,9 @@ importers:
 
   .:
     dependencies:
+      '@db/sqlite':
+        specifier: npm:@jsr/db__sqlite@0.12
+        version: '@jsr/db__sqlite@0.12.0'
       '@nuxt/content':
         specifier: https://pkg.pr.new/@nuxt/content@3108
         version: https://pkg.pr.new/@nuxt/content@3108(magicast@0.3.5)(typescript@5.7.3)
@@ -354,6 +357,36 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@jsr/db__sqlite@0.12.0':
+    resolution: {integrity: sha512-nTMYOzEl8oFhtPS90tAdMbpYTec7/brHtlVLt8afAsNLX+z1FkEIWljxqJS8UDzN23wCTsNXL96NArqBaJRy9A==, tarball: https://npm.jsr.io/~/11/@jsr/db__sqlite/0.12.0.tgz}
+
+  '@jsr/denosaurs__plug@1.0.6':
+    resolution: {integrity: sha512-3sRBjWs6Str1+5w8Lj5t4dDNxUJB6RWJaxAf1e04CHwbbPBbyzrzKs2iammkGlEra8yL2RO70+c8x0/52as6XA==, tarball: https://npm.jsr.io/~/11/@jsr/denosaurs__plug/1.0.6.tgz}
+
+  '@jsr/std__assert@0.217.0':
+    resolution: {integrity: sha512-kCGfcXX8lMcZHWrCgFhbdpNloB50MkLwHdRZvZKjZK424F9g+M742jkTDLMOJmwkDoEqFKyNVrGhPtspS4+NvQ==, tarball: https://npm.jsr.io/~/11/@jsr/std__assert/0.217.0.tgz}
+
+  '@jsr/std__assert@0.221.0':
+    resolution: {integrity: sha512-Y+nGzU7AiBuMGt9i7lwADiJ5ZpSwYr1f3ee3dnUIkUF9BuzX+sMJf6v2QGYDOOfo1EdNZCslQZlj3x62mwnw9w==, tarball: https://npm.jsr.io/~/11/@jsr/std__assert/0.221.0.tgz}
+
+  '@jsr/std__encoding@0.221.0':
+    resolution: {integrity: sha512-fWvwcY1zzMTPt97PVRwHaM5Vyh27NsAeX6yxy9YSLbXjDnW6zjMGmQC5qJqDAz7d8IWq/uUTPZ+A1kr1ps2eUA==, tarball: https://npm.jsr.io/~/11/@jsr/std__encoding/0.221.0.tgz}
+
+  '@jsr/std__fmt@0.217.0':
+    resolution: {integrity: sha512-AM33Cr/V3St3Cj5O4QQe4aMKGyzL9eYz+mOC58BmqxgeZwFbvSC06DzM2DS3ixcsAnwH2kYMXHpCBax0sT9q8Q==, tarball: https://npm.jsr.io/~/11/@jsr/std__fmt/0.217.0.tgz}
+
+  '@jsr/std__fmt@0.221.0':
+    resolution: {integrity: sha512-PErSfwKu1c9yl0a4J1U3f6PR1eZFU451Meok3d4i6OnuM8YCwqndfK/KzdIr7eYykkvB2ln/6JnF/wV37zil4A==, tarball: https://npm.jsr.io/~/11/@jsr/std__fmt/0.221.0.tgz}
+
+  '@jsr/std__fs@0.221.0':
+    resolution: {integrity: sha512-abz06JVR6M2YduJXDnsw3mHzUix85gpJquLbNUAjPe74XYH19BP85beNKH+xNQDYrRaQSN9zCIaQvg2Dmd+csQ==, tarball: https://npm.jsr.io/~/11/@jsr/std__fs/0.221.0.tgz}
+
+  '@jsr/std__path@0.217.0':
+    resolution: {integrity: sha512-KoqEpZX9CE8zyyr4+X6AROOGYv95AysnJni2E5g9pqG+IGUUuNjOC3yRTvHnsB5tJ6uQs6DwET5chIdUPcylIQ==, tarball: https://npm.jsr.io/~/11/@jsr/std__path/0.217.0.tgz}
+
+  '@jsr/std__path@0.221.0':
+    resolution: {integrity: sha512-O8iaP3yhg7nBXkoFsJS8KtL3kLESehM04YbkHEmW3hT93f1citXvR1chYVr7tlSyAcQSzc9WVvcLlX/T19XNhA==, tarball: https://npm.jsr.io/~/11/@jsr/std__path/0.221.0.tgz}
 
   '@kwsites/file-exists@1.1.1':
     resolution: {integrity: sha512-m9/5YGR18lIwxSFDwfE3oA7bWuq9kdau6ugN4H2rJeyhFQZcG9AgSHkQtSD15a8WvTgfz9aikZMrKPHvbpqFiw==}
@@ -3965,6 +3998,45 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@jsr/db__sqlite@0.12.0':
+    dependencies:
+      '@jsr/denosaurs__plug': 1.0.6
+      '@jsr/std__path': 0.217.0
+
+  '@jsr/denosaurs__plug@1.0.6':
+    dependencies:
+      '@jsr/std__encoding': 0.221.0
+      '@jsr/std__fmt': 0.221.0
+      '@jsr/std__fs': 0.221.0
+      '@jsr/std__path': 0.221.0
+
+  '@jsr/std__assert@0.217.0':
+    dependencies:
+      '@jsr/std__fmt': 0.217.0
+
+  '@jsr/std__assert@0.221.0':
+    dependencies:
+      '@jsr/std__fmt': 0.221.0
+
+  '@jsr/std__encoding@0.221.0': {}
+
+  '@jsr/std__fmt@0.217.0': {}
+
+  '@jsr/std__fmt@0.221.0': {}
+
+  '@jsr/std__fs@0.221.0':
+    dependencies:
+      '@jsr/std__assert': 0.221.0
+      '@jsr/std__path': 0.221.0
+
+  '@jsr/std__path@0.217.0':
+    dependencies:
+      '@jsr/std__assert': 0.217.0
+
+  '@jsr/std__path@0.221.0':
+    dependencies:
+      '@jsr/std__assert': 0.221.0
 
   '@kwsites/file-exists@1.1.1':
     dependencies:
