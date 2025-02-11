@@ -12,8 +12,7 @@ export default function bunSqliteConnector(opts) {
       opts.cwd || ".",
       opts.path || `.data/${opts.name || "db"}.bun.sqlite`,
     );
-    const importAvoidDeployError = new Function("specifier", "return import(specifier)");
-    const Database = await importAvoidDeployError("@db/sqlite").then(m => m.Database);
+    const Database = await import("@db/sqlite").then(m => m.Database);
     _db = new Database(filePath);
 
     return _db;
