@@ -2,6 +2,7 @@ import { resolve, dirname } from "node:path";
 
 export default function bunSqliteConnector(opts) {
   let _db;
+  console.log({opts, _db});
   const getDB = async () => {
     if (_db) {
       return _db;
@@ -11,7 +12,8 @@ export default function bunSqliteConnector(opts) {
       opts.cwd || ".",
       opts.path || `.data/${opts.name || "db"}.bun.sqlite`,
     );
-    const Database = await import("@db/sqlite").then(m => m.Database);
+    const importAvoidDeployError = new Function("specifier", "return import(specifier)");
+    const Database = await importAvoidDeployError("@db/sqlite").then(m => m.Database);
     _db = new Database(filePath);
 
     return _db;
