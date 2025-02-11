@@ -1,5 +1,6 @@
 import path from "node:path"
 
+console.log(process.env)
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
